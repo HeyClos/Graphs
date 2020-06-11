@@ -1,3 +1,5 @@
+import random
+
 class User:
     def __init__(self, name):
         self.name = name
@@ -45,7 +47,7 @@ class SocialGraph:
         # !!!! IMPLEMENT ME
         # Add users
         for i in range(0, num_users):
-            self.addUser(f"User {i}")
+            self.add_user(f"User {i}")
 
         # Create Frienships
         # Generate all possible friendship combinations
