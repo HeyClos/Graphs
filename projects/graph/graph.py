@@ -59,7 +59,20 @@ class Graph:
         Print each vertex in depth-first order
         beginning from starting_vertex.
         """
-        pass  # TODO
+        # switch queue to stack
+        stack = Stack()
+        stack.push(starting_vertex)
+        visited = set()
+
+        while stack.size() > 0:
+            current = stack.pop()
+
+            if current not in visited:
+                visited.add(current)
+                print(current)
+                edges = self.get_neighbors(current)
+                for edge in edges:
+                    stack.push(edge)
 
     def dft_recursive(self, starting_vertex, visited=set()):
         # when u call it recusively u have to add in node AND set!
@@ -83,6 +96,15 @@ class Graph:
         starting_vertex to destination_vertex in
         breath-first order.
         """
+        #solve one, you can copy paste for the other, just switch out data types.
+        # use 
+        queue = Queue()
+        visited = set()
+        queue.enqueue([starting_vertex])
+
+        while queue.size() > 0:
+            current_path = queue.dequeue()
+
         pass  # TODO
 
     def dfs(self, starting_vertex, destination_vertex):
@@ -101,8 +123,6 @@ class Graph:
 
         This should be done using recursion.
         """
-        # =none
-        # # if
         current.append(starting_vertex)
 
         if starting_vertex == destination_vertex:

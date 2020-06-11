@@ -1,5 +1,10 @@
 
 def earliest_ancestor(ancestors, starting_node):
+    # use BFS, right now im using a traversal.
+    # traversal will go through enite map and map it out
+    # a search will look through graph and will stop once it finds the item you're looking for.
+
+
     # does starting node have parents?
     # do does parents have parents?
     # increment generation
@@ -21,6 +26,8 @@ def earliest_ancestor(ancestors, starting_node):
         #if node not visited:
         #traverse from that node
         #increment counter
+    
+
 
     def bft(self, starting_vertex):
         '''
